@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="controller"
+            type="com.sg.hjs.driveapp.controller.MainController"/>
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--标题栏 start-->
+        <LinearLayout
+            android:id="@+id/mainLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/mainRg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_launcher"
+                    android:button="@null"
+                    android:gravity="center"/>
+
+                <RadioButton
+                    android:id="@+id/rbSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="报名"/>
+
+                <RadioButton
+                    android:id="@+id/rbSectionOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:onClick="@{controller::rbSectionOneClicked}"
+                    android:text="科一"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rbSectionTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:onClick="@{controller::rbSectionTwoClicked}"
+                    android:text="科二"/>
+
+                <RadioButton
+                    android:id="@+id/rbSectionThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:onClick="@{controller::rbSectionThreeClicked}"
+                    android:text="科三"/>
+
+                <RadioButton
+                    android:id="@+id/rbSectionFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:onClick="@{controller::rbSectionFourClicked}"
+                    android:text="科四"/>
+
+                <RadioButton
+                    android:id="@+id/rbTakeBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="拿本"/>
+            </RadioGroup>
+
+            <FrameLayout
+                android:id="@+id/fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+        </LinearLayout>
+
+        <!--end-->
+
+        <!--侧滑 start-->
+        <FrameLayout
+            android:id="@+id/skiddingFrag"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@android:color/white"/>
+        <!--end-->
+    </android.support.v4.widget.DrawerLayout>
+
+</layout>
